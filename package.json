@@ -1,0 +1,22 @@
+{
+  "name": "moviestube",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhkim1211/angularPractice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhkim1211/angularPractice/issues"
+  },
+  "homepage": "https://github.com/dhkim1211/angularPractice#readme",
+  "devDependencies": {
+    "express": "^4.13.4"
+  }
+}
