@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html data-ng-app="movieStubApp">
-<head>
-	<title>Movie Stub - Book Movie Tickets Online</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
-	<script type="text/javascript" src="js/lib/angular.min.js"></script>
-	<script type="text/javascript" src="js/lib/jquery.min.js"></script>
-	<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
-</head>
-<body class="container">
-	<h1>Movie Stub</h1> <h4>Book Movie Tickets Online</h4>
-	<br/>
-	<input class="form-control" placeholder="Enter your favorite movie" data-ng-model="movieName" />	
-	<h1 data-ng-show="movieName">My favorite movie is {{movieName}}!!</h1>
  
+<head>
+    <title>Movie Stub - Book Movie Tickets Online</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <script type="text/javascript" src="js/lib/angular.min.js"></script>
+    <script type="text/javascript" src="js/lib/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/controller/app.js"></script>
+    <script type="text/javascript" src="js/router/router.js"></script>
+</head>
+ 
+<body class="container" data-ng-controller="movieStubController">
+    <div data-ng-include src="headerSrc"></div>
+    <div data-ng-view=""></div>
 </body>
+ 
 </html>

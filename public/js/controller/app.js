@@ -1,6 +1,7 @@
-window.movieStubApp = angular.module('movieStubApp', []);
+var app = angular.module('movieStubApp', ['ngRoute']);
  
-movieStubApp.controller("movieStubController", function ($scope) {
+app.controller("movieStubController", function ($scope) {
+    $scope.headerSrc = "tmpl/header.html"; //header source location
     $scope.movies = [
         {
             "id": 0,
@@ -27,4 +28,27 @@ movieStubApp.controller("movieStubController", function ($scope) {
             "thumb": "http://upload.wikimedia.org/wikipedia/en/6/66/Transformers07.jpg"
         }
     ];
+
+    $scope.currMovie = null;
+    $scope.getMovieById = function (id) {
+        var movies = $scope.movies;
+        for (var i = 0; i < movies.length; i++) {
+            var movie = $scope.movies[i];
+            if (movie.id == id) {
+                $scope.currMovie = movie;
+            }
+        }
+    }
+    // A simple back function, that will help us navigate between views
+    $scope.back = function () {
+        window.history.back();
+    };
+    $scope.getCount = function (n) {
+        return new Array(n);
+    };
 });
+app.controller("movieDetailsController", function ($scope, $routeParams) {
+    $scope.getMovieById($routeParams.id);
+});
+
+
